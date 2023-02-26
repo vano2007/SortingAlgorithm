@@ -1,8 +1,21 @@
 package com.example.sortingalgorithm;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Algorithm {
+    public String randomIntIn() {
+        Random random = new Random();
+        int[] buf = new int[50_000];
+        for (int i = 0; i < 50_000; i++) {
+            buf[i] = random.nextInt(1000);
+        }
+        String inputInt = "";
+        for (int i = 0; i < 50_000; i++) {
+            inputInt = inputInt + buf[i] + ",";
+        }
+        return inputInt + "1";
+    }
     // создание метода сортировки входных данных
     public String sortData(String input) {
         /** Необходимо данные разделить по маркеру ","
